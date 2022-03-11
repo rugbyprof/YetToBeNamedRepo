@@ -27,6 +27,21 @@ class Bst {
       }
     }
   }
+
+  int Height(Node *root) {
+    if (!root) {
+      return 0;
+    } else {
+      int leftH = Height(root->left);
+      int rightH = Height(root->right);
+      if (leftH > rightH) {
+        return 1 + leftH;
+      } else {
+        return 1 + rightH;
+      }
+    }
+  }
+
   void Print(Node *root) {
     if (!root) {
       return;
@@ -70,4 +85,6 @@ public:
   bool Find(int key) { return Find(root, key); }
 
   void Print() { Print(root); }
+
+  int Height() { return Height(root); }
 };
