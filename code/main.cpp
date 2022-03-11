@@ -17,4 +17,6 @@ int main() {
   cout << "Looking for " << k << ":" << tree.Find(k) << endl;
 
   cout << "Height: " << tree.Height() << endl;
+
+  tree.inorder();
 }

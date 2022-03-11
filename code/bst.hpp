@@ -15,6 +15,7 @@ struct Node {
 };
 
 class Bst {
+
   Node *root;
   void Insert(Node *&root, Node *newNode) {
     if (!root) {
@@ -71,6 +72,15 @@ class Bst {
     }
   }
 
+  void inorder(Node *root) {
+    if (root == nullptr) {
+      return;
+    }
+    inorder(root->left);
+    cout << root->data << "->";
+    inorder(root->right);
+  }
+
 public:
   Bst() { root = nullptr; }
 
@@ -87,4 +97,6 @@ public:
   void Print() { Print(root); }
 
   int Height() { return Height(root); }
+
+  void inorder() { inorder(root); }
 };
