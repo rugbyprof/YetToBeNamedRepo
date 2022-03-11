@@ -70,6 +70,4 @@ public:
   bool Find(int key) { return Find(root, key); }
 
   void Print() { Print(root); }
-
-  int Height() { return Height(root); }
 };

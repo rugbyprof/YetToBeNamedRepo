@@ -11,3 +11,5 @@ int Height(Node *root) {
     }
   }
 }
+
+int Height() { return Height(root); }
